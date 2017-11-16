@@ -18,13 +18,8 @@ struct Address {
         case testnet = 0x98
     }
     
-    let address:String
+    let value:String
     let network:Network
-    
-    init(address: String, network: Network) {
-        self.address = address
-        self.network = network
-    }
     
     init(publicKey: [UInt8], network: Network) {
         self.network = network
@@ -39,8 +34,6 @@ struct Address {
         let checksum = String(networkPrefixSha3.prefix(8))
         let addressByteStr = ConvertUtil.toHexString(networkPrefixByteArray) + checksum
         let addressByte = ConvertUtil.toByteArray(addressByteStr)
-        self.address = base32Encode(addressByte)
-        
-        print(">>> address : \(self.address)")
+        self.value = base32Encode(addressByte)
     }
 }

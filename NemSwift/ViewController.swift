@@ -14,15 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let keypair = CryptoUtil.generateKeyPair()
-        Address(publicKey: keypair.publicKey, network: .mainnet)
+        let account = Account.generteAccount(network: .mainnet)
+        print("address: \(account.address.value)")
+        print("publicKey: \(account.keyPair.publicKeyHexString())")
+        print("privateKey: \(account.keyPair.privateKeyHexString())")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
