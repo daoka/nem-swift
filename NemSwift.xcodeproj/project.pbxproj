@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1AE8F71FBD3D81008A4BC1 /* ripemd-160.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E1AE8F61FBD3D81008A4BC1 /* ripemd-160.c */; };
+		3E2E26421FBD600E004D4425 /* NSData+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E263E1FBD600E004D4425 /* NSData+HexString.swift */; };
+		3E2E26431FBD600E004D4425 /* RIPEMD+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E263F1FBD600E004D4425 /* RIPEMD+Block.swift */; };
+		3E2E26441FBD600E004D4425 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E26401FBD600E004D4425 /* RIPEMD.swift */; };
+		3E2E26451FBD600E004D4425 /* UInt32+CircularShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E26411FBD600E004D4425 /* UInt32+CircularShift.swift */; };
+		3E2E26471FBD7B0C004D4425 /* Base32.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2E26461FBD7B0C004D4425 /* Base32.framework */; };
 		3E31CFA81FBC112D006CFB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31CFA71FBC112D006CFB33 /* AppDelegate.swift */; };
 		3E31CFAA1FBC112D006CFB33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31CFA91FBC112D006CFB33 /* ViewController.swift */; };
 		3E31CFAD1FBC112D006CFB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E31CFAB1FBC112D006CFB33 /* Main.storyboard */; };
@@ -28,9 +34,18 @@
 		3E31D12F1FBC28F8006CFB33 /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31D12E1FBC28F8006CFB33 /* KeyPair.swift */; };
 		3E31D1321FBC2B5C006CFB33 /* ConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31D1311FBC2B5C006CFB33 /* ConvertUtil.swift */; };
 		3E31D1341FBC2C14006CFB33 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31D1331FBC2C14006CFB33 /* CryptoUtil.swift */; };
+		3E31D1361FBC3CC8006CFB33 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31D1351FBC3CC8006CFB33 /* Address.swift */; };
+		3E31D1391FBC452A006CFB33 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1AE8F51FBD3D81008A4BC1 /* ripemd-160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ripemd-160.h"; sourceTree = "<group>"; };
+		3E1AE8F61FBD3D81008A4BC1 /* ripemd-160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ripemd-160.c"; sourceTree = "<group>"; };
+		3E2E263E1FBD600E004D4425 /* NSData+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+HexString.swift"; sourceTree = "<group>"; };
+		3E2E263F1FBD600E004D4425 /* RIPEMD+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RIPEMD+Block.swift"; sourceTree = "<group>"; };
+		3E2E26401FBD600E004D4425 /* RIPEMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RIPEMD.swift; sourceTree = "<group>"; };
+		3E2E26411FBD600E004D4425 /* UInt32+CircularShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt32+CircularShift.swift"; sourceTree = "<group>"; };
+		3E2E26461FBD7B0C004D4425 /* Base32.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base32.framework; path = Carthage/Build/iOS/Base32.framework; sourceTree = "<group>"; };
 		3E31CFA41FBC112D006CFB33 /* NemSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NemSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E31CFA71FBC112D006CFB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E31CFA91FBC112D006CFB33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +80,8 @@
 		3E31D12E1FBC28F8006CFB33 /* KeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPair.swift; sourceTree = "<group>"; };
 		3E31D1311FBC2B5C006CFB33 /* ConvertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUtil.swift; sourceTree = "<group>"; };
 		3E31D1331FBC2C14006CFB33 /* CryptoUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
+		3E31D1351FBC3CC8006CFB33 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +89,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2E26471FBD7B0C004D4425 /* Base32.framework in Frameworks */,
+				3E31D1391FBC452A006CFB33 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E2E263D1FBD600E004D4425 /* RIPEMD-160 */ = {
+			isa = PBXGroup;
+			children = (
+				3E2E263E1FBD600E004D4425 /* NSData+HexString.swift */,
+				3E2E263F1FBD600E004D4425 /* RIPEMD+Block.swift */,
+				3E2E26401FBD600E004D4425 /* RIPEMD.swift */,
+				3E2E26411FBD600E004D4425 /* UInt32+CircularShift.swift */,
+			);
+			path = "RIPEMD-160";
+			sourceTree = "<group>";
+		};
 		3E31CF9B1FBC112D006CFB33 = {
 			isa = PBXGroup;
 			children = (
 				3E31CFA61FBC112D006CFB33 /* NemSwift */,
 				3E31CFA51FBC112D006CFB33 /* Products */,
+				3E31D1371FBC4529006CFB33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +143,7 @@
 		3E31CFBD1FBC1816006CFB33 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3E2E263D1FBD600E004D4425 /* RIPEMD-160 */,
 				3E31D1301FBC2B37006CFB33 /* utils */,
 				3E31D12D1FBC28DC006CFB33 /* models */,
 				3E31CFBE1FBC18D8006CFB33 /* ed25519 */,
@@ -165,6 +197,8 @@
 		3E31D03F1FBC18D8006CFB33 /* librhash */ = {
 			isa = PBXGroup;
 			children = (
+				3E1AE8F61FBD3D81008A4BC1 /* ripemd-160.c */,
+				3E1AE8F51FBD3D81008A4BC1 /* ripemd-160.h */,
 				3E31D0441FBC18D8006CFB33 /* byte_order.c */,
 				3E31D0451FBC18D8006CFB33 /* byte_order.h */,
 				3E31D0661FBC18D8006CFB33 /* sha3.c */,
@@ -177,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				3E31D12E1FBC28F8006CFB33 /* KeyPair.swift */,
+				3E31D1351FBC3CC8006CFB33 /* Address.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -190,6 +225,15 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		3E31D1371FBC4529006CFB33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E2E26461FBD7B0C004D4425 /* Base32.framework */,
+				3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +244,7 @@
 				3E31CFA01FBC112D006CFB33 /* Sources */,
 				3E31CFA11FBC112D006CFB33 /* Frameworks */,
 				3E31CFA21FBC112D006CFB33 /* Resources */,
+				3E31D13A1FBC4537006CFB33 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,6 +302,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E31D13A1FBC4537006CFB33 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Base32.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E31CFA01FBC112D006CFB33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,9 +327,13 @@
 			files = (
 				3E31D1061FBC18D8006CFB33 /* sha3.c in Sources */,
 				3E31D09F1FBC18D8006CFB33 /* fe.c in Sources */,
+				3E2E26431FBD600E004D4425 /* RIPEMD+Block.swift in Sources */,
+				3E2E26421FBD600E004D4425 /* NSData+HexString.swift in Sources */,
 				3E31D0A41FBC18D8006CFB33 /* seed.c in Sources */,
+				3E2E26441FBD600E004D4425 /* RIPEMD.swift in Sources */,
 				3E31D1321FBC2B5C006CFB33 /* ConvertUtil.swift in Sources */,
 				3E31D0A21FBC18D8006CFB33 /* keypair.c in Sources */,
+				3E31D1361FBC3CC8006CFB33 /* Address.swift in Sources */,
 				3E31CFAA1FBC112D006CFB33 /* ViewController.swift in Sources */,
 				3E31D0A31FBC18D8006CFB33 /* sc.c in Sources */,
 				3E31D0A11FBC18D8006CFB33 /* key_exchange.c in Sources */,
@@ -274,7 +341,9 @@
 				3E31D0A61FBC18D8006CFB33 /* sign.c in Sources */,
 				3E31D0A01FBC18D8006CFB33 /* ge.c in Sources */,
 				3E31D1251FBC2119006CFB33 /* ed25519_sha3_512.c in Sources */,
+				3E2E26451FBD600E004D4425 /* UInt32+CircularShift.swift in Sources */,
 				3E31CFA81FBC112D006CFB33 /* AppDelegate.swift in Sources */,
+				3E1AE8F71FBD3D81008A4BC1 /* ripemd-160.c in Sources */,
 				3E31D0A71FBC18D8006CFB33 /* verify.c in Sources */,
 				3E31D1341FBC2C14006CFB33 /* CryptoUtil.swift in Sources */,
 				3E31D12F1FBC28F8006CFB33 /* KeyPair.swift in Sources */,
@@ -420,6 +489,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46946JQQ95;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -441,6 +514,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46946JQQ95;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = USE_KECCAK;
 				INFOPLIST_FILE = NemSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        CryptoUtil.generateKeyPair()
+        let keypair = CryptoUtil.generateKeyPair()
+        Address(publicKey: keypair.publicKey, network: .mainnet)
     }
 
     override func didReceiveMemoryWarning() {
