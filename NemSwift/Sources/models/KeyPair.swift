@@ -49,7 +49,7 @@ struct KeyPair {
         return keyPair
     }
     
-    static func generateKeyPair(_ importKey: String) -> KeyPair {
+    static func repairKeyPair(_ importKey: String) -> KeyPair {
         var privateKeySeed: [UInt8] = []
         let importKeyByteArray = ConvertUtil.toByteArray(importKey)
         let nativeSeed = ConvertUtil.swapByteArray(importKeyByteArray)

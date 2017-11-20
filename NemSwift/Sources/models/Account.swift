@@ -17,4 +17,10 @@ struct Account {
         let address = Address(publicKey: keyPair.publicKey, network: network)
         return Account(keyPair: keyPair, address: address)
     }
+    
+    static public func repairAccount(_ importKey: String, network: Address.Network) -> Account {
+        let keyPair = KeyPair.repairKeyPair(importKey)
+        let address = Address(publicKey: keyPair.publicKey, network: network)
+        return Account(keyPair: keyPair, address: address)
+    }
 }

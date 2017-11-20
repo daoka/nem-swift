@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         print("importKey: \(account.keyPair.importKey())")
         print("=======================")
         
-        let keypair = KeyPair.generateKeyPair(account.keyPair.importKey())
-        print("publicKey by import key : \(keypair.publicKeyHexString())")
+        let repairAccount = Account.repairAccount(account.keyPair.importKey(), network: .mainnet)
+        print("publicKey by import key : \(repairAccount.keyPair.publicKeyHexString())")
     }
 
     override func didReceiveMemoryWarning() {
