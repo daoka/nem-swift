@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         print("publicKey: \(account.keyPair.publicKeyHexString())")
         print("privateKey: \(account.keyPair.privateKeyHexString())")
         print("importKey: \(account.keyPair.importKey())")
+        print("=======================")
+        
+        let keypair = KeyPair.generateKeyPair(account.keyPair.importKey())
+        print("publicKey by import key : \(keypair.publicKeyHexString())")
     }
 
     override func didReceiveMemoryWarning() {
