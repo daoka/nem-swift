@@ -27,6 +27,11 @@ struct KeyPair {
         return ConvertUtil.toHexString(privateKey)
     }
     
+    func importKey() -> String {
+        let swapedSeed = ConvertUtil.swapByteArray(privateKeySeed)
+        return ConvertUtil.toHexString(swapedSeed)
+    }
+    
     static func generateKeyPair() -> KeyPair {
         var privateKeySeed: [UInt8] = []
         let nativeSeed = UnsafeMutablePointer<UInt8>.allocate(capacity: PRIVATE_KEY_SEED_SIZE)

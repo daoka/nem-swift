@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         print("address: \(account.address.value)")
         print("publicKey: \(account.keyPair.publicKeyHexString())")
         print("privateKey: \(account.keyPair.privateKeyHexString())")
+        print("importKey: \(account.keyPair.importKey())")
     }
 
     override func didReceiveMemoryWarning() {
