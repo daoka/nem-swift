@@ -44,6 +44,11 @@
 		3ECF787E1FC3B5A2001AA416 /* AccountMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF787D1FC3B5A2001AA416 /* AccountMetaData.swift */; };
 		3ECF78801FC3C768001AA416 /* NISAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF787F1FC3C768001AA416 /* NISAPI.swift */; };
 		3ECF78821FC3C7D9001AA416 /* AccountMetaDataPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78811FC3C7D9001AA416 /* AccountMetaDataPair.swift */; };
+		3ECF78841FC42700001AA416 /* TransactionMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78831FC42700001AA416 /* TransactionMetaData.swift */; };
+		3ECF78861FC42920001AA416 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78851FC42920001AA416 /* Transaction.swift */; };
+		3ECF78881FC42BAA001AA416 /* Mosaic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78871FC42BAA001AA416 /* Mosaic.swift */; };
+		3ECF788A1FC42C05001AA416 /* MosaicId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78891FC42C05001AA416 /* MosaicId.swift */; };
+		3ECF788E1FC42D9F001AA416 /* TransactionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +103,11 @@
 		3ECF787D1FC3B5A2001AA416 /* AccountMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMetaData.swift; sourceTree = "<group>"; };
 		3ECF787F1FC3C768001AA416 /* NISAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISAPI.swift; sourceTree = "<group>"; };
 		3ECF78811FC3C7D9001AA416 /* AccountMetaDataPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMetaDataPair.swift; sourceTree = "<group>"; };
+		3ECF78831FC42700001AA416 /* TransactionMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMetaData.swift; sourceTree = "<group>"; };
+		3ECF78851FC42920001AA416 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		3ECF78871FC42BAA001AA416 /* Mosaic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mosaic.swift; sourceTree = "<group>"; };
+		3ECF78891FC42C05001AA416 /* MosaicId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicId.swift; sourceTree = "<group>"; };
+		3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +243,11 @@
 				3E9CA6AA1FC2DD5B0096808F /* AccountInfo.swift */,
 				3ECF787D1FC3B5A2001AA416 /* AccountMetaData.swift */,
 				3ECF78811FC3C7D9001AA416 /* AccountMetaDataPair.swift */,
+				3ECF78831FC42700001AA416 /* TransactionMetaData.swift */,
+				3ECF78851FC42920001AA416 /* Transaction.swift */,
+				3ECF78871FC42BAA001AA416 /* Mosaic.swift */,
+				3ECF78891FC42C05001AA416 /* MosaicId.swift */,
+				3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -382,14 +397,17 @@
 				3E31CFAA1FBC112D006CFB33 /* ViewController.swift in Sources */,
 				3E31D0A31FBC18D8006CFB33 /* sc.c in Sources */,
 				3ECF78801FC3C768001AA416 /* NISAPI.swift in Sources */,
+				3ECF78881FC42BAA001AA416 /* Mosaic.swift in Sources */,
 				3E31D0A11FBC18D8006CFB33 /* key_exchange.c in Sources */,
 				3E9CA6A81FC2D9EB0096808F /* DecodableDataParser.swift in Sources */,
 				3E31D09E1FBC18D8006CFB33 /* add_scalar.c in Sources */,
 				3E31D0A61FBC18D8006CFB33 /* sign.c in Sources */,
 				3E9CA6A61FC2D9440096808F /* NISRequest.swift in Sources */,
+				3ECF78861FC42920001AA416 /* Transaction.swift in Sources */,
 				3E31D0A01FBC18D8006CFB33 /* ge.c in Sources */,
 				3E31D1251FBC2119006CFB33 /* ed25519_sha3_512.c in Sources */,
 				3ECF78821FC3C7D9001AA416 /* AccountMetaDataPair.swift in Sources */,
+				3ECF788E1FC42D9F001AA416 /* TransactionMessage.swift in Sources */,
 				3E2E26451FBD600E004D4425 /* UInt32+CircularShift.swift in Sources */,
 				3E31CFA81FBC112D006CFB33 /* AppDelegate.swift in Sources */,
 				3E1AE8F71FBD3D81008A4BC1 /* ripemd-160.c in Sources */,
@@ -397,7 +415,9 @@
 				3E2E26491FBD852F004D4425 /* Account.swift in Sources */,
 				3E31D12F1FBC28F8006CFB33 /* KeyPair.swift in Sources */,
 				3E31D0F41FBC18D8006CFB33 /* byte_order.c in Sources */,
+				3ECF788A1FC42C05001AA416 /* MosaicId.swift in Sources */,
 				3E31D0A51FBC18D8006CFB33 /* sha512.c in Sources */,
+				3ECF78841FC42700001AA416 /* TransactionMetaData.swift in Sources */,
 				3E9CA6AB1FC2DD5B0096808F /* AccountInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
