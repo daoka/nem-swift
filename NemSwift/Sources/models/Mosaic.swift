@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct Mosaics: Decodable {
+    let data: [Mosaic]
+}
+
 struct Mosaic: Decodable {
     let mosaicId: MosaicId
     let quantity: UInt

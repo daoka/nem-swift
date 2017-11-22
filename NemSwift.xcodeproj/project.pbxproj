@@ -39,6 +39,9 @@
 		3E31D1391FBC452A006CFB33 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */; };
 		3E633BD41FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD31FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift */; };
 		3E633BD61FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD51FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift */; };
+		3E633BD81FC546E400D5DCD3 /* Harvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD71FC546E400D5DCD3 /* Harvest.swift */; };
+		3E633BDA1FC54C0300D5DCD3 /* Importance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD91FC54C0300D5DCD3 /* Importance.swift */; };
+		3E633BDC1FC54DF400D5DCD3 /* Namespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BDB1FC54DF400D5DCD3 /* Namespace.swift */; };
 		3E9CA6A21FC2D7380096808F /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CA6A01FC2D6A30096808F /* APIKit.framework */; };
 		3E9CA6A41FC2D7420096808F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CA6A31FC2D7420096808F /* Result.framework */; };
 		3E9CA6A61FC2D9440096808F /* NISRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CA6A51FC2D9440096808F /* NISRequest.swift */; };
@@ -101,6 +104,9 @@
 		3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		3E633BD31FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconfirmedTransactionMetaDataPair.swift; sourceTree = "<group>"; };
 		3E633BD51FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconfirmedTransactionMetaData.swift; sourceTree = "<group>"; };
+		3E633BD71FC546E400D5DCD3 /* Harvest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harvest.swift; sourceTree = "<group>"; };
+		3E633BD91FC54C0300D5DCD3 /* Importance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Importance.swift; sourceTree = "<group>"; };
+		3E633BDB1FC54DF400D5DCD3 /* Namespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Namespace.swift; sourceTree = "<group>"; };
 		3E9CA6A01FC2D6A30096808F /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		3E9CA6A31FC2D7420096808F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3E9CA6A51FC2D9440096808F /* NISRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISRequest.swift; sourceTree = "<group>"; };
@@ -257,6 +263,9 @@
 				3E1000ED1FC51C090011F194 /* TransactionMetaDataPair.swift */,
 				3E633BD31FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift */,
 				3E633BD51FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift */,
+				3E633BD71FC546E400D5DCD3 /* Harvest.swift */,
+				3E633BD91FC54C0300D5DCD3 /* Importance.swift */,
+				3E633BDB1FC54DF400D5DCD3 /* Namespace.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -401,6 +410,7 @@
 				3E2E26421FBD600E004D4425 /* NSData+HexString.swift in Sources */,
 				3E31D0A41FBC18D8006CFB33 /* seed.c in Sources */,
 				3E2E26441FBD600E004D4425 /* RIPEMD.swift in Sources */,
+				3E633BDC1FC54DF400D5DCD3 /* Namespace.swift in Sources */,
 				3E31D1321FBC2B5C006CFB33 /* ConvertUtil.swift in Sources */,
 				3E31D0A21FBC18D8006CFB33 /* keypair.c in Sources */,
 				3E31D1361FBC3CC8006CFB33 /* Address.swift in Sources */,
@@ -430,6 +440,8 @@
 				3ECF788A1FC42C05001AA416 /* MosaicId.swift in Sources */,
 				3E31D0A51FBC18D8006CFB33 /* sha512.c in Sources */,
 				3ECF78841FC42700001AA416 /* TransactionMetaData.swift in Sources */,
+				3E633BDA1FC54C0300D5DCD3 /* Importance.swift in Sources */,
+				3E633BD81FC546E400D5DCD3 /* Harvest.swift in Sources */,
 				3E9CA6AB1FC2DD5B0096808F /* AccountInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

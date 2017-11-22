@@ -143,4 +143,64 @@ final class NISAPI {
         
         let address: String
     }
+    
+    // 3.1.7 Requesting harvest info data for an account
+    struct AccountHarvests: NISRequest {
+        typealias Response = Harvests
+        let method: HTTPMethod = .get
+        let path: String = "/account/harvests"
+        var parameters: Any? {
+            return ["address": address, "hash": hash]
+        }
+        
+        let address: String
+        let hash: String
+    }
+    
+    // 3.1.8 Retrieving account importances for accounts
+    struct AccountImportances: NISRequest {
+        typealias Response = Importances
+        let method: HTTPMethod = .get
+        let path: String = "/account/importances"
+    }
+    
+    // 3.1.9 Retrieving namespaces that an account owns
+    struct AccountNamespacePage: NISRequest {
+        typealias Response = Namespaces
+        let method: HTTPMethod = .get
+        let path: String = "/account/namespace/page"
+        
+        var parameters: Any? {
+            var params = ["address": address]
+            if let parent = parent {
+                params["parent"] = parent
+            }
+            if let id = id {
+                params["id"] = id
+            }
+            if let pageSize = pageSize {
+                params["pageSize"] = pageSize
+            }
+            
+            return params
+        }
+        
+        let address: String
+        let parent: String?
+        let id: String?
+        let pageSize: String?
+    }
+    
+    // Retrieving mosaics that an account owns
+    struct AccountMosaicOwned: NISRequest {
+        typealias Response = Mosaics
+        let method: HTTPMethod = .get
+        let path: String = "/account/mosaic/owned"
+        
+        var parameters: Any? {
+            return ["address": address]
+        }
+        
+        let address: String
+    }
 }
