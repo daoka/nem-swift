@@ -9,10 +9,10 @@
 import Foundation
 
 struct Transaction: Decodable {
-    let timeStamp: UInt?
+    let timeStamp: UInt
     let amount: UInt?
-    let signature: String?
-    let fee: UInt?
+    let signature: String
+    let fee: UInt
     let recipient: String?
     let type: UInt
     let version: Int

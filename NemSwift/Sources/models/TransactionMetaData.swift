@@ -15,5 +15,5 @@ struct TransactionMetaData: Decodable {
 }
 
 struct TransactionHash: Decodable {
-    let hash: String
+    let data: String
 }

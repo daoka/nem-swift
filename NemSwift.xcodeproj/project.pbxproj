@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1000EE1FC51C090011F194 /* TransactionMetaDataPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1000ED1FC51C090011F194 /* TransactionMetaDataPair.swift */; };
 		3E1AE8F71FBD3D81008A4BC1 /* ripemd-160.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E1AE8F61FBD3D81008A4BC1 /* ripemd-160.c */; };
 		3E2E26421FBD600E004D4425 /* NSData+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E263E1FBD600E004D4425 /* NSData+HexString.swift */; };
 		3E2E26431FBD600E004D4425 /* RIPEMD+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E263F1FBD600E004D4425 /* RIPEMD+Block.swift */; };
@@ -36,6 +37,8 @@
 		3E31D1321FBC2B5C006CFB33 /* ConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31D1311FBC2B5C006CFB33 /* ConvertUtil.swift */; };
 		3E31D1361FBC3CC8006CFB33 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31D1351FBC3CC8006CFB33 /* Address.swift */; };
 		3E31D1391FBC452A006CFB33 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */; };
+		3E633BD41FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD31FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift */; };
+		3E633BD61FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD51FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift */; };
 		3E9CA6A21FC2D7380096808F /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CA6A01FC2D6A30096808F /* APIKit.framework */; };
 		3E9CA6A41FC2D7420096808F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CA6A31FC2D7420096808F /* Result.framework */; };
 		3E9CA6A61FC2D9440096808F /* NISRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CA6A51FC2D9440096808F /* NISRequest.swift */; };
@@ -52,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1000ED1FC51C090011F194 /* TransactionMetaDataPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMetaDataPair.swift; sourceTree = "<group>"; };
 		3E1AE8F51FBD3D81008A4BC1 /* ripemd-160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ripemd-160.h"; sourceTree = "<group>"; };
 		3E1AE8F61FBD3D81008A4BC1 /* ripemd-160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ripemd-160.c"; sourceTree = "<group>"; };
 		3E2E263E1FBD600E004D4425 /* NSData+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+HexString.swift"; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		3E31D1311FBC2B5C006CFB33 /* ConvertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUtil.swift; sourceTree = "<group>"; };
 		3E31D1351FBC3CC8006CFB33 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		3E633BD31FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconfirmedTransactionMetaDataPair.swift; sourceTree = "<group>"; };
+		3E633BD51FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconfirmedTransactionMetaData.swift; sourceTree = "<group>"; };
 		3E9CA6A01FC2D6A30096808F /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		3E9CA6A31FC2D7420096808F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3E9CA6A51FC2D9440096808F /* NISRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISRequest.swift; sourceTree = "<group>"; };
@@ -244,10 +250,13 @@
 				3ECF787D1FC3B5A2001AA416 /* AccountMetaData.swift */,
 				3ECF78811FC3C7D9001AA416 /* AccountMetaDataPair.swift */,
 				3ECF78831FC42700001AA416 /* TransactionMetaData.swift */,
-				3ECF78851FC42920001AA416 /* Transaction.swift */,
 				3ECF78871FC42BAA001AA416 /* Mosaic.swift */,
 				3ECF78891FC42C05001AA416 /* MosaicId.swift */,
+				3ECF78851FC42920001AA416 /* Transaction.swift */,
 				3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */,
+				3E1000ED1FC51C090011F194 /* TransactionMetaDataPair.swift */,
+				3E633BD31FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift */,
+				3E633BD51FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E633BD61FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift in Sources */,
 				3E31D1061FBC18D8006CFB33 /* sha3.c in Sources */,
 				3E31D09F1FBC18D8006CFB33 /* fe.c in Sources */,
 				3ECF787E1FC3B5A2001AA416 /* AccountMetaData.swift in Sources */,
@@ -395,6 +405,7 @@
 				3E31D0A21FBC18D8006CFB33 /* keypair.c in Sources */,
 				3E31D1361FBC3CC8006CFB33 /* Address.swift in Sources */,
 				3E31CFAA1FBC112D006CFB33 /* ViewController.swift in Sources */,
+				3E633BD41FC541C300D5DCD3 /* UnconfirmedTransactionMetaDataPair.swift in Sources */,
 				3E31D0A31FBC18D8006CFB33 /* sc.c in Sources */,
 				3ECF78801FC3C768001AA416 /* NISAPI.swift in Sources */,
 				3ECF78881FC42BAA001AA416 /* Mosaic.swift in Sources */,
@@ -407,6 +418,7 @@
 				3E31D0A01FBC18D8006CFB33 /* ge.c in Sources */,
 				3E31D1251FBC2119006CFB33 /* ed25519_sha3_512.c in Sources */,
 				3ECF78821FC3C7D9001AA416 /* AccountMetaDataPair.swift in Sources */,
+				3E1000EE1FC51C090011F194 /* TransactionMetaDataPair.swift in Sources */,
 				3ECF788E1FC42D9F001AA416 /* TransactionMessage.swift in Sources */,
 				3E2E26451FBD600E004D4425 /* UInt32+CircularShift.swift in Sources */,
 				3E31CFA81FBC112D006CFB33 /* AppDelegate.swift in Sources */,
@@ -569,6 +581,7 @@
 					USE_KECCAK,
 				);
 				INFOPLIST_FILE = NemSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.openapostille.NemSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,6 +603,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = USE_KECCAK;
 				INFOPLIST_FILE = NemSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.openapostille.NemSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

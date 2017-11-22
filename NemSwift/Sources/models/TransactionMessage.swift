@@ -9,6 +9,6 @@
 import Foundation
 
 struct TransactionMessage: Decodable {
-    let payload: String
-    let type: UInt
+    let payload: String?
+    let type: UInt?
 }

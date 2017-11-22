@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         let repairAccount = Account.repairAccount(account.keyPair.importKey(), network: .mainnet)
         print("publicKey by import key : \(repairAccount.keyPair.publicKeyHexString())")
-        /*
+/*
         Session.send(NISAPI.AccountGetFromPublicKey(publicKey: account.keyPair.publicKeyHexString())) { result in
             switch result {
             case .success(let response):
@@ -33,8 +33,17 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
-        */
+ 
         Session.send(NISAPI.AccountGet(address: account.address.value)) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
+ */
+        Session.send(NISAPI.AccountTransfersIncoming(address: "NCXIZQEARYTW2BGFHAPEZCIY5ILOUUJRC3VZH4MZ", hash: nil, id: nil)) { result in
             switch result {
             case .success(let response):
                 print(response)
