@@ -13,7 +13,7 @@ struct KeyPair {
     private static let PUBLIC_KEY_SIZE = 32
     private static let PRIVATE_KEY_SIZE = 64
     private static let PRIVATE_KEY_SEED_SIZE = 32
-    private static let SIGNATURE_SIZE = 64
+    private let SIGNATURE_SIZE = 64
     
     let publicKey: [UInt8]
     let privateKey: [UInt8]
@@ -30,6 +30,18 @@ struct KeyPair {
     func importKey() -> String {
         let swapedSeed = ConvertUtil.swapByteArray(privateKeySeed)
         return ConvertUtil.toHexString(swapedSeed)
+    }
+    
+    func sign(message: [UInt8]) -> [UInt8] {
+        let signature = UnsafeMutablePointer<UInt8>.allocate(capacity: SIGNATURE_SIZE)
+        ed25519_sha3_sign(signature,
+                          ConvertUtil.toNativeArray(message),
+                          message.count,
+                          ConvertUtil.toNativeArray(publicKey),
+                          ConvertUtil.toNativeArray(privateKey)
+        )
+        
+        return ConvertUtil.toArray(signature, SIGNATURE_SIZE)
     }
     
     static func generateKeyPair() -> KeyPair {

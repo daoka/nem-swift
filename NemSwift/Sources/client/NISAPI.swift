@@ -203,4 +203,25 @@ final class NISAPI {
         
         let address: String
     }
+    
+    // 7.9.2 Sending the data to NIS
+    struct TransactionAnnounce: NISRequest {
+        typealias Response =  NemAnnounceResult
+        let method: HTTPMethod = .post
+        let path = "/transaction/announce"
+        
+        var parameters: Any? {
+            
+            /*
+            let obj = JSONBodyParameters(JSONObject: [
+                "data": data,
+                "signature": signature
+                ])*/
+            
+            return ["data": data, "signature": signature]
+        }
+        
+        let data: String
+        let signature: String
+    }
 }

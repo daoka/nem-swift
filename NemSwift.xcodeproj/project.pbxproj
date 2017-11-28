@@ -42,11 +42,17 @@
 		3E633BD81FC546E400D5DCD3 /* Harvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD71FC546E400D5DCD3 /* Harvest.swift */; };
 		3E633BDA1FC54C0300D5DCD3 /* Importance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BD91FC54C0300D5DCD3 /* Importance.swift */; };
 		3E633BDC1FC54DF400D5DCD3 /* Namespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BDB1FC54DF400D5DCD3 /* Namespace.swift */; };
+		3E633BE41FC568D800D5DCD3 /* TransactionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BE31FC568D800D5DCD3 /* TransactionHelper.swift */; };
+		3E633BE61FC574A800D5DCD3 /* TransferTransactionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BE51FC574A800D5DCD3 /* TransferTransactionHelper.swift */; };
+		3E633BE81FC57DD800D5DCD3 /* RequestAnnounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E633BE71FC57DD800D5DCD3 /* RequestAnnounce.swift */; };
 		3E9CA6A21FC2D7380096808F /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CA6A01FC2D6A30096808F /* APIKit.framework */; };
 		3E9CA6A41FC2D7420096808F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CA6A31FC2D7420096808F /* Result.framework */; };
 		3E9CA6A61FC2D9440096808F /* NISRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CA6A51FC2D9440096808F /* NISRequest.swift */; };
 		3E9CA6A81FC2D9EB0096808F /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CA6A71FC2D9EB0096808F /* DecodableDataParser.swift */; };
 		3E9CA6AB1FC2DD5B0096808F /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CA6AA1FC2DD5B0096808F /* AccountInfo.swift */; };
+		3EB4304C1FCD10C3003A2C98 /* NemAnnounceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4304B1FCD10C3003A2C98 /* NemAnnounceResult.swift */; };
+		3EB4304E1FCD115E003A2C98 /* TransactionHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4304D1FCD115E003A2C98 /* TransactionHash.swift */; };
+		3EB430521FCD6199003A2C98 /* NISErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB430511FCD6199003A2C98 /* NISErrorResponse.swift */; };
 		3ECF787E1FC3B5A2001AA416 /* AccountMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF787D1FC3B5A2001AA416 /* AccountMetaData.swift */; };
 		3ECF78801FC3C768001AA416 /* NISAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF787F1FC3C768001AA416 /* NISAPI.swift */; };
 		3ECF78821FC3C7D9001AA416 /* AccountMetaDataPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78811FC3C7D9001AA416 /* AccountMetaDataPair.swift */; };
@@ -107,11 +113,17 @@
 		3E633BD71FC546E400D5DCD3 /* Harvest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harvest.swift; sourceTree = "<group>"; };
 		3E633BD91FC54C0300D5DCD3 /* Importance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Importance.swift; sourceTree = "<group>"; };
 		3E633BDB1FC54DF400D5DCD3 /* Namespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Namespace.swift; sourceTree = "<group>"; };
+		3E633BE31FC568D800D5DCD3 /* TransactionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHelper.swift; sourceTree = "<group>"; };
+		3E633BE51FC574A800D5DCD3 /* TransferTransactionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTransactionHelper.swift; sourceTree = "<group>"; };
+		3E633BE71FC57DD800D5DCD3 /* RequestAnnounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAnnounce.swift; sourceTree = "<group>"; };
 		3E9CA6A01FC2D6A30096808F /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		3E9CA6A31FC2D7420096808F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3E9CA6A51FC2D9440096808F /* NISRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISRequest.swift; sourceTree = "<group>"; };
 		3E9CA6A71FC2D9EB0096808F /* DecodableDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
 		3E9CA6AA1FC2DD5B0096808F /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		3EB4304B1FCD10C3003A2C98 /* NemAnnounceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NemAnnounceResult.swift; sourceTree = "<group>"; };
+		3EB4304D1FCD115E003A2C98 /* TransactionHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHash.swift; sourceTree = "<group>"; };
+		3EB430511FCD6199003A2C98 /* NISErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISErrorResponse.swift; sourceTree = "<group>"; };
 		3ECF787D1FC3B5A2001AA416 /* AccountMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMetaData.swift; sourceTree = "<group>"; };
 		3ECF787F1FC3C768001AA416 /* NISAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NISAPI.swift; sourceTree = "<group>"; };
 		3ECF78811FC3C7D9001AA416 /* AccountMetaDataPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMetaDataPair.swift; sourceTree = "<group>"; };
@@ -183,6 +195,7 @@
 		3E31CFBD1FBC1816006CFB33 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3E633BE21FC568BB00D5DCD3 /* transaction */,
 				3E9CA69F1FC2D51F0096808F /* client */,
 				3E31D1301FBC2B37006CFB33 /* utils */,
 				3E31D12D1FBC28DC006CFB33 /* models */,
@@ -266,6 +279,10 @@
 				3E633BD71FC546E400D5DCD3 /* Harvest.swift */,
 				3E633BD91FC54C0300D5DCD3 /* Importance.swift */,
 				3E633BDB1FC54DF400D5DCD3 /* Namespace.swift */,
+				3E633BE71FC57DD800D5DCD3 /* RequestAnnounce.swift */,
+				3EB4304B1FCD10C3003A2C98 /* NemAnnounceResult.swift */,
+				3EB4304D1FCD115E003A2C98 /* TransactionHash.swift */,
+				3EB430511FCD6199003A2C98 /* NISErrorResponse.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -287,6 +304,15 @@
 				3E31D1381FBC452A006CFB33 /* CryptoSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E633BE21FC568BB00D5DCD3 /* transaction */ = {
+			isa = PBXGroup;
+			children = (
+				3E633BE31FC568D800D5DCD3 /* TransactionHelper.swift */,
+				3E633BE51FC574A800D5DCD3 /* TransferTransactionHelper.swift */,
+			);
+			path = transaction;
 			sourceTree = "<group>";
 		};
 		3E9CA69F1FC2D51F0096808F /* client */ = {
@@ -405,9 +431,11 @@
 				3E633BD61FC5426000D5DCD3 /* UnconfirmedTransactionMetaData.swift in Sources */,
 				3E31D1061FBC18D8006CFB33 /* sha3.c in Sources */,
 				3E31D09F1FBC18D8006CFB33 /* fe.c in Sources */,
+				3EB430521FCD6199003A2C98 /* NISErrorResponse.swift in Sources */,
 				3ECF787E1FC3B5A2001AA416 /* AccountMetaData.swift in Sources */,
 				3E2E26431FBD600E004D4425 /* RIPEMD+Block.swift in Sources */,
 				3E2E26421FBD600E004D4425 /* NSData+HexString.swift in Sources */,
+				3E633BE41FC568D800D5DCD3 /* TransactionHelper.swift in Sources */,
 				3E31D0A41FBC18D8006CFB33 /* seed.c in Sources */,
 				3E2E26441FBD600E004D4425 /* RIPEMD.swift in Sources */,
 				3E633BDC1FC54DF400D5DCD3 /* Namespace.swift in Sources */,
@@ -432,14 +460,18 @@
 				3ECF788E1FC42D9F001AA416 /* TransactionMessage.swift in Sources */,
 				3E2E26451FBD600E004D4425 /* UInt32+CircularShift.swift in Sources */,
 				3E31CFA81FBC112D006CFB33 /* AppDelegate.swift in Sources */,
+				3EB4304C1FCD10C3003A2C98 /* NemAnnounceResult.swift in Sources */,
 				3E1AE8F71FBD3D81008A4BC1 /* ripemd-160.c in Sources */,
 				3E31D0A71FBC18D8006CFB33 /* verify.c in Sources */,
 				3E2E26491FBD852F004D4425 /* Account.swift in Sources */,
 				3E31D12F1FBC28F8006CFB33 /* KeyPair.swift in Sources */,
 				3E31D0F41FBC18D8006CFB33 /* byte_order.c in Sources */,
 				3ECF788A1FC42C05001AA416 /* MosaicId.swift in Sources */,
+				3EB4304E1FCD115E003A2C98 /* TransactionHash.swift in Sources */,
 				3E31D0A51FBC18D8006CFB33 /* sha512.c in Sources */,
 				3ECF78841FC42700001AA416 /* TransactionMetaData.swift in Sources */,
+				3E633BE61FC574A800D5DCD3 /* TransferTransactionHelper.swift in Sources */,
+				3E633BE81FC57DD800D5DCD3 /* RequestAnnounce.swift in Sources */,
 				3E633BDA1FC54C0300D5DCD3 /* Importance.swift in Sources */,
 				3E633BD81FC546E400D5DCD3 /* Harvest.swift in Sources */,
 				3E9CA6AB1FC2DD5B0096808F /* AccountInfo.swift in Sources */,

@@ -13,7 +13,3 @@ struct TransactionMetaData: Decodable {
     let id: Int
     let hash: TransactionHash
 }
-
-struct TransactionHash: Decodable {
-    let data: String
-}

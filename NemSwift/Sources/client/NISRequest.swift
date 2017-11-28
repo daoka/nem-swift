@@ -15,7 +15,7 @@ protocol NISRequest: Request {
 
 extension NISRequest {
     var baseURL: URL {
-        return URL(string: "http://alice2.nem.ninja:7890/")!
+        return URL(string: "http://23.228.67.85:7890/")!
     }
 }
 
@@ -29,5 +29,27 @@ extension NISRequest where Response: Decodable {
             throw ResponseError.unexpectedObject(object)
         }
         return try JSONDecoder().decode(Response.self, from: data)
+    }
+}
+
+struct NISError: Error {
+    let message: String
+    
+    init(object: Any) {
+        let dictionary = object as? [String: Any]
+        message = dictionary?["message"] as? String ?? "Unknown error occurred"
+    }
+}
+
+extension NISRequest {
+    func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
+        let res = String(data: object as! Data, encoding: .utf8)
+        print(res)
+        
+        guard 200..<300 ~= urlResponse.statusCode else {
+            throw NISError(object: object)
+        }
+        
+        return object
     }
 }
