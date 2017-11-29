@@ -9,5 +9,5 @@
 import Foundation
 
 struct TransactionHash: Decodable {
-    let data: String
+    let data: String?
 }

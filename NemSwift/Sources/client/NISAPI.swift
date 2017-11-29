@@ -211,13 +211,6 @@ final class NISAPI {
         let path = "/transaction/announce"
         
         var parameters: Any? {
-            
-            /*
-            let obj = JSONBodyParameters(JSONObject: [
-                "data": data,
-                "signature": signature
-                ])*/
-            
             return ["data": data, "signature": signature]
         }
         

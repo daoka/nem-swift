@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             }
         }*/
         
-        let transaction = TransferTransactionHelper.init(publicKey: account.keyPair.publicKey, network: .testnet, receipentAddress: account.address.value, amount: 0, messageType: .Plain, message: "test", mosaics: nil)
+        let transaction = TransferTransactionHelper.init(publicKey: account.keyPair.publicKey, network: .testnet, receipentAddress: account.address.value, amount: 0, messageType: .Plain, message: "送金テスト", mosaics: nil)
         let announce = transaction.generateRequestAnnounce()
         let requestAnnounce = RequestAnnounce.generateRequestAnnounce(requestAnnounce: announce, keyPair: account.keyPair)
         
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                 
                 switch error {
                 case .responseError(let e as NISError):
-                    print(e.message)
+                    print(e)
                 default:
                     print(error)
                 }

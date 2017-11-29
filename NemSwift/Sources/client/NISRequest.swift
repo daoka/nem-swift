@@ -32,18 +32,26 @@ extension NISRequest where Response: Decodable {
     }
 }
 
-struct NISError: Error {
-    let message: String
+struct NISError: Error, Codable {
+    let timeStamp: UInt?
+    let error: String?
+    let message: String?
+    let status: UInt?
     
     init(object: Any) {
-        let dictionary = object as? [String: Any]
-        message = dictionary?["message"] as? String ?? "Unknown error occurred"
+        let decodar = JSONDecoder()
+        let obj = try! decodar.decode(NISError.self, from: object as! Data)
+        self.timeStamp = obj.timeStamp
+        self.error = obj.error
+        self.message = obj.message
+        self.status = obj.status
     }
 }
 
 extension NISRequest {
     func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
-        let res = String(data: object as! Data, encoding: .utf8)
+        print(urlResponse.statusCode)
+        let res = String(data: object as! Data, encoding: .utf8)!
         print(res)
         
         guard 200..<300 ~= urlResponse.statusCode else {
