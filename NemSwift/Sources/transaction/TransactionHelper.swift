@@ -61,7 +61,6 @@ class TransactionHelper {
     }
     
     enum Network: UInt32 {
-        case mijin = 0x60
         case mainnet = 0x68000000
         case testnet = 0x98000000
     }
@@ -87,6 +86,7 @@ class TransactionHelper {
     
     func generateCommonTransactionField(transactionFee: UInt64) -> [UInt8] {
         let now = Date()
+        print(now)
         
         return ConvertUtil.toByteArrayWithLittleEndian(type.transactionTypeBytes()) +
             ConvertUtil.toByteArrayWithLittleEndian(network.rawValue + type.versionBytes()) +

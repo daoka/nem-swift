@@ -58,8 +58,15 @@ class ViewController: UIViewController {
             }
         }*/
         
-        let transaction = TransferTransactionHelper.init(publicKey: account.keyPair.publicKey, network: .testnet, receipentAddress: account.address.value, amount: 0, messageType: .Plain, message: "送金テスト", mosaics: nil)
-        let announce = transaction.generateRequestAnnounce()
+        /*
+        let announce = TransferTransactionHelper.generateTransferRequestAnnounce(publicKey: account.keyPair.publicKey, network: .testnet, recepientAddress: account.address.value, amount: 0, messageTyep: .Plain, message: "送金テスト")
+ */
+        
+        let mosaic = TransferMosaic(namespace: "daoka", mosaic: "daokasweep", quantity: 1)
+        let mosaics = [mosaic]
+ 
+        let announce = TransferTransactionHelper.generateMosaicTransferRequestAnnounce(publicKey: account.keyPair.publicKey, network: .testnet, recepientAddress: account.address.value, mosaics: mosaics, messageType: .Plain, message: "mosaic transfer test")
+        
         let requestAnnounce = RequestAnnounce.generateRequestAnnounce(requestAnnounce: announce, keyPair: account.keyPair)
         
         Session.send(NISAPI.TransactionAnnounce(data: requestAnnounce.data, signature: requestAnnounce.signature)) { result in

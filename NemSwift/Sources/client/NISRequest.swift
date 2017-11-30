@@ -15,7 +15,7 @@ protocol NISRequest: Request {
 
 extension NISRequest {
     var baseURL: URL {
-        return URL(string: "http://23.228.67.85:7890/")!
+        return URL(string: "http://104.128.226.60:7890/")!
     }
 }
 

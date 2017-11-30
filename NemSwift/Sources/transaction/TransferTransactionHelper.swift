@@ -11,7 +11,7 @@ import Foundation
 struct TransferMosaic {
     let namespace: String
     let mosaic: String
-    let quantity: Int
+    let quantity: UInt64
 }
 
 class TransferTransactionHelper: TransactionHelper {
@@ -37,25 +37,31 @@ class TransferTransactionHelper: TransactionHelper {
         super.init(type: .Transfer, publicKey: publicKey, network: network)
     }
     
+    static func generateTransferRequestAnnounce(publicKey: [UInt8], network: Network, recepientAddress: String, amount: UInt64, messageTyep: MessageType, message: String) -> [UInt8] {
+        let announce = TransferTransactionHelper(publicKey: publicKey, network: network,
+                                                 receipentAddress: recepientAddress, amount: amount,
+                                                 messageType: messageTyep, message: message, mosaics: nil)
+        return announce.generateRequestAnnounce()
+    }
+    
+    static func generateMosaicTransferRequestAnnounce(publicKey: [UInt8], network: Network, recepientAddress: String, mosaics: [TransferMosaic], messageType: MessageType, message: String) -> [UInt8] {
+        
+        let amount = (UInt64)(1_000_000)
+        
+        let announce = TransferTransactionHelper(publicKey: publicKey, network: network, receipentAddress: recepientAddress, amount: amount, messageType: messageType, message: message, mosaics: mosaics)
+        
+        return announce.generateRequestAnnounce()
+    }
+    
     public func generateRequestAnnounce() -> [UInt8] {
         let commonField = generateCommonTransactionField(transactionFee: transferFee())
-        let messageBytes: [UInt8]
-        
-        if (message.isEmpty) {
-            messageBytes = ConvertUtil.toByteArrayWithLittleEndian(UInt32(0))
-        } else {
-            messageBytes = ConvertUtil.toByteArrayWithLittleEndian(messageLength()) +
-            ConvertUtil.toByteArrayWithLittleEndian(messageType.rawValue) +
-            ConvertUtil.toByteArrayWithLittleEndian((UInt32)(messagePayloadBytes().count)) +
-            messagePayloadBytes()
-        }
         
         return commonField +
             ConvertUtil.toByteArrayWithLittleEndian(UInt32(recipientAddress.count)) +
             Array(recipientAddress.utf8) as [UInt8] +
             ConvertUtil.toByteArrayWithLittleEndian(amount) +
-            messageBytes +
-            ConvertUtil.toByteArrayWithLittleEndian(UInt32(0))
+            messageBytes() +
+            mosaicBytes()
     }
     
     private func messagePayloadBytes() -> [UInt8] {
@@ -78,5 +84,48 @@ class TransferTransactionHelper: TransactionHelper {
     private func messageTransferFee() -> UInt64 {
         let count = messagePayloadBytes().count
         return (UInt64)(count > 0 ? 50_000 * UInt(1 + message.lengthOfBytes(using: .utf8) / 32) : 0)
+    }
+    
+    private func messageBytes() -> [UInt8] {
+        if (message.isEmpty) {
+            return ConvertUtil.toByteArrayWithLittleEndian(UInt32(0))
+        } else {
+            return ConvertUtil.toByteArrayWithLittleEndian(messageLength()) +
+                ConvertUtil.toByteArrayWithLittleEndian(messageType.rawValue) +
+                ConvertUtil.toByteArrayWithLittleEndian((UInt32)(messagePayloadBytes().count)) +
+                messagePayloadBytes()
+        }
+    }
+    
+    private func mosaicBytes() -> [UInt8] {
+        guard let mosaics = mosaics else {
+            return ConvertUtil.toByteArrayWithLittleEndian(UInt32(0))
+        }
+        
+        var mosaicsBytes: [UInt8]?
+        let mosaicNumBytes = ConvertUtil.toByteArrayWithLittleEndian(UInt32(mosaics.count))
+        
+        for mosaic in mosaics {
+            let mosaicNameSpaceIdBytes = Array(mosaic.namespace.utf8) as [UInt8]
+            let mosaicNameBytes = Array(mosaic.mosaic.utf8) as [UInt8]
+            let mosaicIdStructLength = 4 + mosaicNameSpaceIdBytes.count + 4 + mosaicNameBytes.count
+            let mosaicStructLength = 4 + mosaicIdStructLength + 8
+        
+            let tmp = ConvertUtil.toByteArrayWithLittleEndian((UInt32)(mosaicStructLength)) +
+            ConvertUtil.toByteArrayWithLittleEndian((UInt32)(mosaicIdStructLength)) +
+            ConvertUtil.toByteArrayWithLittleEndian((UInt32)(mosaicNameSpaceIdBytes.count)) +
+            mosaicNameSpaceIdBytes +
+            ConvertUtil.toByteArrayWithLittleEndian((UInt32)(mosaicNameBytes.count)) +
+            mosaicNameBytes +
+            ConvertUtil.toByteArrayWithLittleEndian(mosaic.quantity)
+            
+            if (mosaicsBytes == nil) {
+                mosaicsBytes = tmp
+            } else {
+                mosaicsBytes = mosaicsBytes! + tmp
+            }
+        }
+        
+        return mosaicNumBytes + mosaicsBytes!
     }
 }
