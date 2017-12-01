@@ -191,6 +191,28 @@ final class NISAPI {
         let pageSize: String?
     }
     
+    struct NamespaceMosaicDefintionPage: NISRequest {
+        typealias Response = MosaicDefinitionMetaDataPairs
+        let method: HTTPMethod = .get
+        let path: String = "/namespace/mosaic/definition/page"
+        
+        var parameters: Any? {
+            var params = ["namespace": namespace]
+            if let id = id {
+                params = ["id": id]
+            }
+            if let pagesize = pagesize {
+                params["pagesize"] = pagesize
+            }
+            
+            return params
+        }
+        
+        let namespace: String
+        let id: String?
+        let pagesize: String?
+    }
+    
     // Retrieving mosaics that an account owns
     struct AccountMosaicOwned: NISRequest {
         typealias Response = Mosaics

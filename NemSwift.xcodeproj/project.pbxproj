@@ -61,6 +61,11 @@
 		3ECF78881FC42BAA001AA416 /* Mosaic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78871FC42BAA001AA416 /* Mosaic.swift */; };
 		3ECF788A1FC42C05001AA416 /* MosaicId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF78891FC42C05001AA416 /* MosaicId.swift */; };
 		3ECF788E1FC42D9F001AA416 /* TransactionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */; };
+		3EDE99FF1FD12C6D0046A05B /* MosaicDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE99FE1FD12C6D0046A05B /* MosaicDefinition.swift */; };
+		3EDE9A011FD12D210046A05B /* MosaicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE9A001FD12D210046A05B /* MosaicProperty.swift */; };
+		3EDE9A051FD12FF10046A05B /* MosaicDefinitionMetaDataPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE9A041FD12FF10046A05B /* MosaicDefinitionMetaDataPair.swift */; };
+		3EDE9A071FD1302C0046A05B /* MosaicMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE9A061FD1302C0046A05B /* MosaicMetaData.swift */; };
+		3EDE9A091FD130FE0046A05B /* MosaicLevy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE9A081FD130FE0046A05B /* MosaicLevy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +137,11 @@
 		3ECF78871FC42BAA001AA416 /* Mosaic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mosaic.swift; sourceTree = "<group>"; };
 		3ECF78891FC42C05001AA416 /* MosaicId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicId.swift; sourceTree = "<group>"; };
 		3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMessage.swift; sourceTree = "<group>"; };
+		3EDE99FE1FD12C6D0046A05B /* MosaicDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicDefinition.swift; sourceTree = "<group>"; };
+		3EDE9A001FD12D210046A05B /* MosaicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicProperty.swift; sourceTree = "<group>"; };
+		3EDE9A041FD12FF10046A05B /* MosaicDefinitionMetaDataPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicDefinitionMetaDataPair.swift; sourceTree = "<group>"; };
+		3EDE9A061FD1302C0046A05B /* MosaicMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicMetaData.swift; sourceTree = "<group>"; };
+		3EDE9A081FD130FE0046A05B /* MosaicLevy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicLevy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +281,11 @@
 				3ECF78831FC42700001AA416 /* TransactionMetaData.swift */,
 				3ECF78871FC42BAA001AA416 /* Mosaic.swift */,
 				3ECF78891FC42C05001AA416 /* MosaicId.swift */,
+				3EDE9A061FD1302C0046A05B /* MosaicMetaData.swift */,
+				3EDE99FE1FD12C6D0046A05B /* MosaicDefinition.swift */,
+				3EDE9A001FD12D210046A05B /* MosaicProperty.swift */,
+				3EDE9A041FD12FF10046A05B /* MosaicDefinitionMetaDataPair.swift */,
+				3EDE9A081FD130FE0046A05B /* MosaicLevy.swift */,
 				3ECF78851FC42920001AA416 /* Transaction.swift */,
 				3ECF788D1FC42D9F001AA416 /* TransactionMessage.swift */,
 				3E1000ED1FC51C090011F194 /* TransactionMetaDataPair.swift */,
@@ -434,6 +449,7 @@
 				3EB430521FCD6199003A2C98 /* NISErrorResponse.swift in Sources */,
 				3ECF787E1FC3B5A2001AA416 /* AccountMetaData.swift in Sources */,
 				3E2E26431FBD600E004D4425 /* RIPEMD+Block.swift in Sources */,
+				3EDE9A011FD12D210046A05B /* MosaicProperty.swift in Sources */,
 				3E2E26421FBD600E004D4425 /* NSData+HexString.swift in Sources */,
 				3E633BE41FC568D800D5DCD3 /* TransactionHelper.swift in Sources */,
 				3E31D0A41FBC18D8006CFB33 /* seed.c in Sources */,
@@ -452,7 +468,9 @@
 				3E31D09E1FBC18D8006CFB33 /* add_scalar.c in Sources */,
 				3E31D0A61FBC18D8006CFB33 /* sign.c in Sources */,
 				3E9CA6A61FC2D9440096808F /* NISRequest.swift in Sources */,
+				3EDE9A051FD12FF10046A05B /* MosaicDefinitionMetaDataPair.swift in Sources */,
 				3ECF78861FC42920001AA416 /* Transaction.swift in Sources */,
+				3EDE9A071FD1302C0046A05B /* MosaicMetaData.swift in Sources */,
 				3E31D0A01FBC18D8006CFB33 /* ge.c in Sources */,
 				3E31D1251FBC2119006CFB33 /* ed25519_sha3_512.c in Sources */,
 				3ECF78821FC3C7D9001AA416 /* AccountMetaDataPair.swift in Sources */,
@@ -462,6 +480,7 @@
 				3E31CFA81FBC112D006CFB33 /* AppDelegate.swift in Sources */,
 				3EB4304C1FCD10C3003A2C98 /* NemAnnounceResult.swift in Sources */,
 				3E1AE8F71FBD3D81008A4BC1 /* ripemd-160.c in Sources */,
+				3EDE99FF1FD12C6D0046A05B /* MosaicDefinition.swift in Sources */,
 				3E31D0A71FBC18D8006CFB33 /* verify.c in Sources */,
 				3E2E26491FBD852F004D4425 /* Account.swift in Sources */,
 				3E31D12F1FBC28F8006CFB33 /* KeyPair.swift in Sources */,
@@ -471,6 +490,7 @@
 				3E31D0A51FBC18D8006CFB33 /* sha512.c in Sources */,
 				3ECF78841FC42700001AA416 /* TransactionMetaData.swift in Sources */,
 				3E633BE61FC574A800D5DCD3 /* TransferTransactionHelper.swift in Sources */,
+				3EDE9A091FD130FE0046A05B /* MosaicLevy.swift in Sources */,
 				3E633BE81FC57DD800D5DCD3 /* RequestAnnounce.swift in Sources */,
 				3E633BDA1FC54C0300D5DCD3 /* Importance.swift in Sources */,
 				3E633BD81FC546E400D5DCD3 /* Harvest.swift in Sources */,
